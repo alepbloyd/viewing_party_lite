@@ -4,8 +4,16 @@ class ViewingParty < ApplicationRecord
     validates_presence_of :movie_title
     validates_presence_of :movie_duration_minutes
 
+    validate :party_duration_minutes_greater_movie_duration_minutes
+
     has_many :viewing_party_users
     has_many :users, through: :viewing_party_users
+
+    def party_duration_minutes_greater_movie_duration_minutes
+        if movie_duration_minutes > party_duration_minutes
+            errors.add(:party_duration_minutes, "Party duration has to be longer than the movie duration")
+        end
+    end 
 
     def host_name
         host = User.find(viewing_party_users.where(status: "hosting").first.user_id)

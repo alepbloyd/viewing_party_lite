@@ -15,7 +15,6 @@ class ViewingpartiesController < ApplicationController
     else 
       date = DateTime.parse("#{params[:date]} #{params[:time]}")
       vp = ViewingParty.create!(start_time: date, party_duration_minutes: params[:runtime], movie_title: params[:movie_title], movie_duration_minutes: params[:movie_runtime])
-      binding.pry 
       ViewingPartyUser.create!(user_id: params[:user_id], viewing_party_id: vp.id, status: 1)
       if params[:user_ids] != nil 
         params[:user_ids].each do |id|

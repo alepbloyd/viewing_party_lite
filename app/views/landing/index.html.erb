@@ -13,6 +13,9 @@
 <br><br>
 
 <% if current_user %>
+
+  <%= link_to "My Dashboard", "/users/#{current_user.id}/discover"%>
+
   <div id="existing-users">
     <% @users.each do |user|%>
       <div id="user-<%=user.id%>">

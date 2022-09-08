@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'landing page', type: :feature do
 
   before(:each) do
-    generic_user = User.create!(first_name: "Alep", last_name: "Bloyd", email: "beepo@beep.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
+    @generic_user = User.create!(first_name: "Alep", last_name: "Bloyd", email: "beepo@beep.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
 
     visit login_path
 
@@ -67,6 +67,16 @@ RSpec.describe 'landing page', type: :feature do
     click_on "Log In"
 
     expect(current_path).to eq(login_path)
+  end
+
+  it 'if non-logged-in visitor tries to visit "/dashboard", they remain on the landing page and see a message that the must be logged in or registered to access dashboard' do
+    visit '/'
+    click_on "Log out"
+
+    visit "/users/#{@generic_user.id}/discover"
+
+    expect(current_path).to eq(root_path)
+    expect(page).to have_content("Must be logged in to view dashboard")
   end
 
 end

@@ -27,7 +27,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 06 Sep 2022 19:39:45 GMT
+      - Thu, 08 Sep 2022 01:33:16 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -44,30 +44,30 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 b6caa49e59026d07a8e0859900a10572.cloudfront.net (CloudFront)
+      - 1.1 76a7fdbced88b6eccf433c4e386bae40.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD55-P1
+      - IAD89-C3
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - IRy_0TRfxYPwANK1RBQAlJXxNP4G53w67MMSAqgBnOG_kBkjvuxKKg==
+      - TwYyxIl5ZjUmjwbu1xrTrsAAJaZFZo6bgSdo-mc2MhSFTAJt998c7Q==
     body:
       encoding: ASCII-8BIT
       string: '{"page":1,"results":[{"adult":false,"backdrop_path":"/suaEOtk1N1sgg2MTM7oZd2cfVp3.jpg","genre_ids":[53,80],"id":680,"original_language":"en","original_title":"Pulp
         Fiction","overview":"A burger-loving hit man, his philosophical partner, a
         drug-addled gangster''s moll and a washed-up boxer converge in this sprawling,
         comedic crime caper. Their adventures unfurl in three stories that ingeniously
-        trip back and forth in time.","popularity":60.467,"poster_path":"/fIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg","release_date":"1994-09-10","title":"Pulp
-        Fiction","video":false,"vote_average":8.5,"vote_count":23712},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":109005,"original_language":"en","original_title":"Pulp
+        trip back and forth in time.","popularity":53.693,"poster_path":"/fIE3lAGcZDV1G6XM5KmuWnNsPp1.jpg","release_date":"1994-09-10","title":"Pulp
+        Fiction","video":false,"vote_average":8.5,"vote_count":23718},{"adult":false,"backdrop_path":null,"genre_ids":[99],"id":109005,"original_language":"en","original_title":"Pulp
         Fiction Art","overview":"A guilty pleasure of the mid-20th century, pulp fiction
         magazines were often defined less by their contents than by their provocative
         covers. This documentary explores the shocking art that brought life to these
         lurid publications. Filmmaker Jamie McDonald delves into the collection of
         art historian Robert Lesser, shedding light on this nearly forgotten art form
-        and the ways it impacted popular culture.","popularity":0.797,"poster_path":"/pVpCuDyyvt3HRjVEYUUBOqrio7F.jpg","release_date":"2005-01-01","title":"Pulp
+        and the ways it impacted popular culture.","popularity":1.02,"poster_path":"/pVpCuDyyvt3HRjVEYUUBOqrio7F.jpg","release_date":"2005-01-01","title":"Pulp
         Fiction Art","video":false,"vote_average":5.5,"vote_count":4},{"adult":false,"backdrop_path":null,"genre_ids":[35],"id":738735,"original_language":"en","original_title":"Stealing
         Pulp Fiction","overview":"A diehard Quentin Tarantino fan recruits his friend
-        Elizabeth to steal a 35mm film reel of Pulp Fiction.","popularity":0.615,"poster_path":"/5OHH3y2v8uwluOZLC2Kt8ENcjxn.jpg","release_date":"2020-09-01","title":"Stealing
+        Elizabeth to steal a 35mm film reel of Pulp Fiction.","popularity":0.867,"poster_path":"/5OHH3y2v8uwluOZLC2Kt8ENcjxn.jpg","release_date":"2020-09-01","title":"Stealing
         Pulp Fiction","video":false,"vote_average":0,"vote_count":0},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":982376,"original_language":"en","original_title":"Pulp
         Fiction: the Facts","overview":"Behind the scenes of the legendary classic
         film by Quentin Tarantino.","popularity":0.6,"poster_path":null,"release_date":"","title":"Pulp
@@ -78,9 +78,9 @@ http_interactions:
         imaginations. It has even been estimated that 90-95% of the top blockbusters
         in Hollywood movies, were based on the stories from the Pulp Fiction-era.","popularity":0.6,"poster_path":null,"release_date":"2009-01-01","title":"Pulp
         Fiction: the Golden Age of Storytelling","video":false,"vote_average":4,"vote_count":1},{"adult":false,"backdrop_path":null,"genre_ids":[],"id":890682,"original_language":"fr","original_title":"Pulpe
-        Fiction","overview":"Which luscious candidate will pass the casting?","popularity":0.6,"poster_path":"/uCsJrzjQ47krDxUibUJITKZlvHN.jpg","release_date":"2020-11-06","title":"Pulpe
+        Fiction","overview":"Which luscious candidate will pass the casting?","popularity":0.617,"poster_path":"/uCsJrzjQ47krDxUibUJITKZlvHN.jpg","release_date":"2020-11-06","title":"Pulpe
         Fiction","video":false,"vote_average":0,"vote_count":0}],"total_pages":1,"total_results":6}'
-  recorded_at: Tue, 06 Sep 2022 19:39:45 GMT
+  recorded_at: Thu, 08 Sep 2022 01:33:16 GMT
 - request:
     method: get
     uri: https://api.themoviedb.org/3/search/movie?api_key=TMDB_KEY&include_adult=false&language=en-US&page=2&query=Pulp%20Fiction
@@ -108,7 +108,7 @@ http_interactions:
       Connection:
       - keep-alive
       Date:
-      - Tue, 06 Sep 2022 19:39:45 GMT
+      - Thu, 08 Sep 2022 01:33:16 GMT
       Server:
       - openresty
       Access-Control-Allow-Origin:
@@ -125,15 +125,15 @@ http_interactions:
       X-Cache:
       - Miss from cloudfront
       Via:
-      - 1.1 ebd7b246dc1b8bef0a7a10752563dc62.cloudfront.net (CloudFront)
+      - 1.1 b471d3775e81a9be536b52b99f39452a.cloudfront.net (CloudFront)
       X-Amz-Cf-Pop:
-      - IAD55-P1
+      - IAD89-C3
       Alt-Svc:
       - h3=":443"; ma=86400
       X-Amz-Cf-Id:
-      - 55rKCALQ8n02LYNJokODBGD07u1gXFwdRWfvWu2pwzjEYLdnEGkc5Q==
+      - WnBJ9IXHb7n_Mh8pfG6JjKA6X6C33RNOgSPIPiGv3AeHdB496nmKiw==
     body:
       encoding: ASCII-8BIT
       string: '{"page":2,"results":[],"total_pages":1,"total_results":6}'
-  recorded_at: Tue, 06 Sep 2022 19:39:45 GMT
+  recorded_at: Thu, 08 Sep 2022 01:33:16 GMT
 recorded_with: VCR 6.1.0

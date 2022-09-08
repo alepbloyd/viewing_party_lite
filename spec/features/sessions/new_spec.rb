@@ -14,7 +14,7 @@ RSpec.describe "log in page", type: :feature do
     fill_in "Password", with: "password123"
   end
 
-  it 'directs user to their dashboard if email and password pairing are valid' do
+  it 'directs user to landing page if email and password pairing are valid' do
     user1 = User.create!(first_name: "David", last_name: "Lynch", email: "david-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
 
     visit login_path
@@ -24,7 +24,7 @@ RSpec.describe "log in page", type: :feature do
 
     click_on "Log In"
 
-    expect(current_path).to eq("/users/#{user1.id}/discover")
+    expect(current_path).to eq(root_path)
   end
 
   it 'returns an error if user email does not exist' do
@@ -58,7 +58,7 @@ RSpec.describe "log in page", type: :feature do
   it 'returns a complete-all-fields error if email left out' do
     user1 = User.create!(first_name: "David", last_name: "Lynch", email: "david-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
 
-    visit login_path
+    visit "/login"
 
     fill_in "Password", with: "moviesAreStinky"
 

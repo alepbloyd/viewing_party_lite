@@ -29,7 +29,7 @@ RSpec.describe 'landing page', type: :feature do
     expect(current_path).to eq("/register")
   end
 
-  it 'displays list of existing users, with links to each user\'s dashboard' do
+  it 'displays list of existing users' do
     user1 = User.create!(first_name: "David", last_name: "Lynch", email: "david-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
 
     user2 = User.create!(first_name: "Steven", last_name: "Spielberg", email: "steven-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
@@ -39,29 +39,17 @@ RSpec.describe 'landing page', type: :feature do
     visit '/'
 
     within "#existing-users" do
-      expect(page).to have_content("david-fake@test.com's Dashboard")
-      expect(page).to have_content("steven-fake@test.com's Dashboard")
-      expect(page).to have_content("greta-fake@test.com's Dashboard")
+      expect(page).to have_content("david-fake@test.com")
+      expect(page).to have_content("steven-fake@test.com")
+      expect(page).to have_content("greta-fake@test.com")
     end
 
-    click_on "david-fake@test.com's Dashboard"
-
-    expect(current_path).to eq("/users/#{user1.id}")
   end
 
   it 'has link to return to landing page, which is present on all pages' do
     user1 = User.create!(first_name: "David", last_name: "Lynch", email: "david-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
     
     visit '/'
-
-    within "#home-link-container" do
-      expect(page).to have_content("Home")
-      click_on("Home")
-    end
-
-    expect(current_path).to eq("/")
-
-    click_on "david-fake@test.com's Dashboard"
 
     within "#home-link-container" do
       expect(page).to have_content("Home")

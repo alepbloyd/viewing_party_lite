@@ -16,7 +16,7 @@
   <div id="existing-users">
     <% @users.each do |user|%>
       <div id="user-<%=user.id%>">
-        <%= link_to "#{user.email}'s Dashboard", user_path(user.id), class: "user-dashboard-link"%>
+        <%= "#{user.email}"%>
       </div>
     <% end %>
   </div>

@@ -2,6 +2,17 @@ require 'rails_helper'
 
 RSpec.describe 'landing page', type: :feature do
 
+  before(:each) do
+    generic_user = User.create!(first_name: "Alep", last_name: "Bloyd", email: "beepo@beep.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
+
+    visit login_path
+
+    fill_in "Email", with: "beepo@beep.com"
+    fill_in "Password", with: "iluvmovies123"
+
+    click_on "Log In"
+  end
+
   it 'has a landing page with title of application' do
     visit '/'
 
@@ -10,6 +21,8 @@ RSpec.describe 'landing page', type: :feature do
 
   it 'has button to create new user' do
     visit '/'
+
+    click_on "Log out"
 
     click_on "Create a New User"
 
@@ -60,6 +73,8 @@ RSpec.describe 'landing page', type: :feature do
 
   it 'has a link for "Log In"' do
     visit "/"
+
+    click_on "Log out"
 
     click_on "Log In"
 

@@ -119,4 +119,14 @@ RSpec.describe "log in page", type: :feature do
     expect(page).to have_content("Log In")
   end
 
+  it 'does not display the list of existing users if no user is logged in' do
+
+    user1 = User.create!(first_name: "David", last_name: "Lynch", email: "david-fake@test.com", password: "iluvmovies123", password_confirmation: "iluvmovies123")
+
+    visit root_path
+
+    expect(page).to_not have_content("david-fake@test.com")
+
+  end
+
 end

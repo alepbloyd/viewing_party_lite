@@ -21,6 +21,7 @@ class UsersController < ApplicationController
             redirect_to "/register", notice: "Error: Email address is taken"
         else
             user = User.create(user_params)
+            session[:user_id] = user.id
             redirect_to "/users/#{user.id}", notice: "User #{user.email} successfully created!"
         end
     end

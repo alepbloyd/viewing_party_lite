@@ -97,4 +97,10 @@ RSpec.describe "log in page", type: :feature do
     expect(page).to_not have_content("Log In")
   end
 
+  it 'does not display a link to log out if no user is logged in' do
+    visit root_path
+
+    expect(page).to_not have_content("Log out")
+  end
+
 end
